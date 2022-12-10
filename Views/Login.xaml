@@ -29,7 +29,7 @@
                 <Entry x:Name="PasswordField" MaximumHeightRequest="45"  AnchorX="-12" Placeholder="Password" PlaceholderColor="Gray" Text="{Binding Text}"/>
             </StackLayout>
 
-            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef"/>
+            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="LoginButton"/>
 
             <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
                 <Label Text="No tiene una cuenta?" TextColor="Gray"/>
