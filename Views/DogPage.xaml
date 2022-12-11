@@ -9,7 +9,7 @@
             <Image Source="dogs_icon.png"
                    SemanticProperties.Description="Dog icon!"
                    HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="Adopt a dog" VerticalOptions="End" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Adopt a dog" VerticalOptions="Center" />
         </HorizontalStackLayout>            
         </StackLayout>
     </ScrollView>

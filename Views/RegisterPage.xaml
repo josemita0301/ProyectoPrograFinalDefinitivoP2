@@ -9,11 +9,11 @@
                 <Image Source="register1.png"
                    SemanticProperties.Description="Form icon!"
                    HeightRequest="64" />
-                <Label FontSize="22" FontAttributes="Bold" Text="Register Page" VerticalOptions="End" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Register Page" VerticalOptions="Center" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Spacing="10">
-                <Label FontSize="22" FontAttributes="Bold" Text="Please fill in the information below:" VerticalOptions="Center" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Please fill out the information below:" VerticalOptions="Center" />
                 <Label FontSize="22" VerticalOptions="End" />
             </HorizontalStackLayout>
 

@@ -9,7 +9,7 @@
                 <Image Source="form_icon.png"
                    SemanticProperties.Description="Form icon!"
                    HeightRequest="64" />
-                <Label FontSize="22" FontAttributes="Bold" Text="Adoption Form" VerticalOptions="End" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Adoption Form" VerticalOptions="Center" />
             </HorizontalStackLayout>
             <Label FontSize="22" Text="Fill out the adoption form as a last step!" VerticalOptions="End" />
 
