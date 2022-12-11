@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPrograFinalDefinitivoP2.Views.DogPage"
              Title="DogPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Dogs up for adoption!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView Margin="20">
+        <StackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="dogs_icon.png"
+                   SemanticProperties.Description="Dog icon!"
+                   HeightRequest="64" />
+            <Label FontSize="22" FontAttributes="Bold" Text="Adopt a dog" VerticalOptions="End" />
+        </HorizontalStackLayout>            
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

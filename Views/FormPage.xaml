@@ -10,24 +10,24 @@
                    SemanticProperties.Description="Form icon!"
                    HeightRequest="64" />
                 <Label FontSize="22" FontAttributes="Bold" Text="Adoption Form" VerticalOptions="End" />
-                <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
             </HorizontalStackLayout>
+            <Label FontSize="22" Text="Fill out the adoption form as a last step!" VerticalOptions="End" />
 
             <Label FontSize="14" FontAttributes="Bold" Text="Why do you want to adopt a dog?" Margin="0,5,5,0"/>
             <Entry x:Name="motivInput"
                      Placeholder="Enter your motivation for adopting a dog:" PlaceholderColor="Gray"/>
 
-            <Label FontSize="14" FontAttributes="Bold" Text="Do you currently have more dogs?" Margin="0,5,5,0"/>
-            <RadioButton Value="Yes" Content="Yes"
-             GroupName="moreDogs" />
-            <RadioButton Value="No" Content="No"
-             GroupName="moreDogs" />
+            <StackLayout RadioButtonGroup.GroupName="moreDogs">
+                <Label FontSize="14" FontAttributes="Bold" Text="Do you currently have more dogs?" Margin="0,5,5,0"/>
+                <RadioButton Value="Yes" Content="Yes" />
+                <RadioButton Value="No" Content="No" />
+            </StackLayout>
 
-            <Label FontSize="14" FontAttributes="Bold" Text="Have you had other dogs in the past?" Margin="0,5,5,0"/>
-            <RadioButton x:Name="yesPD" Value="Yes" Content="Yes"
-             GroupName="prevDogs" />
-            <RadioButton Value="No" Content="No"
-             GroupName="prevDogs" />
+            <StackLayout RadioButtonGroup.GroupName="prevDogs">
+                <Label FontSize="14" FontAttributes="Bold" Text="Have you had other dogs in the past?" Margin="0,5,5,0"/>
+                <RadioButton Value="Yes" Content="Yes" />
+                <RadioButton Value="No" Content="No" />
+            </StackLayout>
 
             <Label FontSize="14" FontAttributes="Bold" Text="What happened with the previous dog(s)?" Margin="0,5,5,0"/>
             <Entry x:Name="prevDogsInput"
