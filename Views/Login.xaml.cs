@@ -1,5 +1,4 @@
 using ProyectoPrograFinalDefinitivoP2.Models;
-using static Android.Content.ClipData;
 
 namespace ProyectoPrograFinalDefinitivoP2.Views;
 

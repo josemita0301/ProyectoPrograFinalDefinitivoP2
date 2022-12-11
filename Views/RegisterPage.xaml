@@ -78,8 +78,7 @@
                    HeightRequest="50"
                    HorizontalOptions="Start"/>
 
-            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="ResgiterClick"/>
-            <Button x:Name="register" BackgroundColor="#0792ef" Text="Register Now" Clicked ="Register_Clicker" Margin="0,5,5,0" IsEnabled="False"/>
+            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="RegisterClick"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
