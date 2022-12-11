@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPrograFinalDefinitivoP2.Views.DogPage"
-             Title="DogPage">
+             Title="All Dogs Page"
+             Shell.FlyoutBehavior = "Flyout"
+             Shell.FlyoutItemIsVisible="True">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{FontImage Glyph='+', Color=White, Size=22}" />
@@ -23,8 +25,8 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding Nombre}" FontSize="22"/>
-                    <Label Text="{Binding Descripcion}" FontSize="22" TextColor="Silver"/>
+                    <Label Text="{Binding Name}" FontSize="22"/>
+                    <Label Text="{Binding Description}" FontSize="22" TextColor="Silver"/>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

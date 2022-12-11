@@ -1,7 +1,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPrograFinalDefinitivoP2.Views.UploadDog"
-             Title="UploadDog">
+             Title="UploadDog"
+             Shell.FlyoutBehavior = "Flyout"
+             Shell.FlyoutItemIsVisible="True">
     <ScrollView Margin="20">
         <StackLayout>
             <HorizontalStackLayout Spacing="10">
