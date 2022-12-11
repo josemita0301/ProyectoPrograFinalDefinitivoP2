@@ -11,8 +11,8 @@
 
             <Image Source="company_logo.jpg" HeightRequest="150" WidthRequest="150" />
             <VerticalStackLayout Spacing="5">
-                <Label Text="Bienvenido!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center"/>
-                <Label Text="Ingresar a su cuenta" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <Label Text="Welcome!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <Label Text="Log into your account" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center"/>
             </VerticalStackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -29,11 +29,11 @@
                 <Entry x:Name="PasswordField" MaximumHeightRequest="45"  AnchorX="-12" Placeholder="Password" PlaceholderColor="Gray" Text="{Binding Text}"/>
             </StackLayout>
 
-            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="LoginButton"/>
+            <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="LoginButton"/>
 
             <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
-                <Label Text="No tiene una cuenta?" TextColor="Gray"/>
-                <Button Text="Registrese aquí" TextColor="#50b3f2" BackgroundColor="Black" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Clicked="RegisterButton"/>
+                <Label Text="You don't have an account?" TextColor="Gray"/>
+                <Button Text="Register here" TextColor="#50b3f2" BackgroundColor="Black" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Clicked="RegisterButton"/>
             </StackLayout>
         </VerticalStackLayout>
     </ScrollView>

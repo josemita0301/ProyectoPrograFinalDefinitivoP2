@@ -6,15 +6,14 @@
     <ScrollView Margin="20">
         <StackLayout>
             <HorizontalStackLayout Spacing="10">
-                <Image Source="form_icon.png"
+                <Image Source="register1.png"
                    SemanticProperties.Description="Form icon!"
                    HeightRequest="64" />
-                <Label FontSize="22" FontAttributes="Bold" Text="Register Page" VerticalOptions="End" />
-                <Label FontSize="22" VerticalOptions="End" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Register Page" VerticalOptions="Center" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Spacing="10">
-                <Label FontSize="22" FontAttributes="Bold" Text="Please fill in the information below:" VerticalOptions="Center" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Please fill out the information below:" VerticalOptions="Center" />
                 <Label FontSize="22" VerticalOptions="End" />
             </HorizontalStackLayout>
 
@@ -46,7 +45,7 @@
             <Entry x:Name="phoneInput"
                      Placeholder="Name" PlaceholderColor="Gray"/>
 
-            <Label FontSize="14" FontAttributes="Bold" Text="Icono" Margin="0,5,5,0"/>
+            <Label FontSize="14" FontAttributes="Bold" Text="Icon" Margin="0,5,5,0"/>
             <RadioButton x:Name="yesPD" Value="Yes"
              GroupName="iconGroup" IsChecked="True"/>
             <Image Source="user1.png"
@@ -78,7 +77,7 @@
                    HeightRequest="50"
                    HorizontalOptions="Start"/>
 
-            <Button Text="Ingresar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="RegisterClick"/>
+            <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="RegisterClick"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
