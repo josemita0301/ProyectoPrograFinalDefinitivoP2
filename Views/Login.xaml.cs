@@ -19,6 +19,6 @@ public partial class Login : ContentPage
 
     async void RegisterButton(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new RegisterPage());
+        await Shell.Current.GoToAsync(nameof(RegisterPage));
     }
 }
