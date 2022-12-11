@@ -11,14 +11,15 @@ public partial class Login : ContentPage
 		InitializeComponent();
     }
 
-    private async void LoginButton(object sender, EventArgs e)
+    private void LoginButton(object sender, EventArgs e)
     {
         string appDataPath = FileSystem.AppDataDirectory;
 
         string[] archivos = Directory.GetFiles(appDataPath);
-            int cont = 0;
-        for (int i = 0; i < archivos.Length; i++)
+        for (int i = 0; i <= archivos.Length; i++)
         {
+            bool uservalid = false;
+            int cont = 0;
             string nombreArchivo = archivos[i];
             foreach (string line in File.ReadLines(nombreArchivo))
             {
@@ -26,7 +27,7 @@ public partial class Login : ContentPage
                 {
                     if (UsernameField.Text == line)
                     {
-
+                        uservalid= true;
                     }
                 }
 
@@ -34,7 +35,10 @@ public partial class Login : ContentPage
                 {
                     if (PasswordField.Text == line)
                     {
+                        if (uservalid)
+                        {
 
+                        }
                     }
                 }
                 cont++;

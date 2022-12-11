@@ -92,8 +92,11 @@ public partial class RegisterPage : ContentPage
 
             if (BindingContext is Models.User user)
             {
-                string datos = userNameInput.Text + "\n" + passwordInput.Text;
-                File.WriteAllText(user.Filename, datos);
+                string[] datos = new string[2];
+                datos[0] = userNameInput.Text;
+                datos[1] = passwordInput.Text;
+
+                File.WriteAllLines(user.Filename, datos);
             }
 
             await Shell.Current.GoToAsync("..");
