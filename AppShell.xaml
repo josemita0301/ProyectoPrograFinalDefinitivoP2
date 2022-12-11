@@ -6,9 +6,17 @@
     xmlns:views="clr-namespace:ProyectoPrograFinalDefinitivoP2.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+    <TabBar>
+
+        <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:Login}"
         Route="MainPage" />
+        
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:RegisterPage}"
+        Route="MainPage" />
+    </TabBar>
 
 </Shell>
