@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPrograFinalDefinitivoP2.Models
 {
-    internal class LoginUsers
+    internal class From
     {
 
     }

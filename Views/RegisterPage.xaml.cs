@@ -90,9 +90,14 @@ public partial class RegisterPage : ContentPage
             }
             if (BindingContext is Models.User user)
             {
-                string[] datos = new string[2];
+                string[] datos = new string[7];
                 datos[0] = userNameInput.Text;
                 datos[1] = passwordInput.Text;
+                datos[2] = nameInput.Text;
+                datos[3] = surnameInput.Text;
+                datos[4] = mailInput.Text;
+                datos[5] = areaInput.Text;
+                datos[6] = phoneInput.Text;
 
                 File.WriteAllLines(user.Filename, datos);
             }

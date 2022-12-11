@@ -79,6 +79,7 @@
             </StackLayout>
 
             <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="UploadDogClicked"/>
+            <Button Text="Delete" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="DeleteDogClicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
