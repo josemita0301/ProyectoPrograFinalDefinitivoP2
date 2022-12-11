@@ -13,17 +13,6 @@ public partial class FormPage : ContentPage
         InitializeComponent();
     }
 
-    private async void SendWhatsapp(string phoneNumber, string message)
-    {
-        bool supportsUri = await Launcher.Default.CanOpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
-        if (supportsUri)
-            await Launcher.Default.OpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
-
-        else
-            await App.Current.MainPage.DisplayAlert("Error", "Unable to open WhatsApp.", "OK");
-
-    }
-
     private async void LearnMore_Clicked(object sender, EventArgs e)
     {
 
@@ -65,10 +54,13 @@ public partial class FormPage : ContentPage
                 return;
             }
 
-            // enviar mensaje de confirmación
+            /**
+            // enviar mensaje de confirmación Whatsapp
             
             string number = "+593 " + "987629927"; // LEER DE ARCHIVO
-            SendWhatsapp(number, "Hi! The adoption process has started!");
+            SendWhatsapp(number, "Hi! The adoption process has started!");**/
+
+            SendMailNewOwner();
         }
         else
         {
@@ -89,7 +81,7 @@ public partial class FormPage : ContentPage
     {
         MailMessage correo = new MailMessage();
         correo.From = new MailAddress("betterhomesender@gmail.com", "Better Home", System.Text.Encoding.UTF8);//Correo de salida
-        correo.To.Add("amelycordova49@gmail.com"); //Correo destino?
+        correo.To.Add("antocortesl27@gmail.com"); //Correo destino? amelycordova49@gmail.com
         correo.Subject = "Correo de adopcion"; //Asunto
         correo.Body = "Your request has been processed! The current owner will get in contact with you soon."; //Mensaje del correo
         correo.IsBodyHtml = true;
@@ -102,5 +94,15 @@ public partial class FormPage : ContentPage
         ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
         smtp.EnableSsl = true;//True si el servidor de correo permite ssl
         smtp.Send(correo);
+    }
+    private async void SendWhatsapp(string phoneNumber, string message)
+    {
+        bool supportsUri = await Launcher.Default.CanOpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
+        if (supportsUri)
+            await Launcher.Default.OpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
+
+        else
+            await App.Current.MainPage.DisplayAlert("Error", "Unable to open WhatsApp.", "OK");
+
     }
 }
