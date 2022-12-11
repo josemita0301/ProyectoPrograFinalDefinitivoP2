@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace ProyectoPrograFinalDefinitivoP2.Views;
 
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
@@ -20,21 +22,80 @@ public partial class UploadDog : ContentPage
 
 	private async void UploadDogClicked(object sender, EventArgs e)
 	{
-        if (BindingContext is Models.Dog dog)
+        //Validation complete information
+        if (nameInput.Text != null && ageInput.Text != null && addressInput.Text != null &&
+            descriptionInput.Text != null && colorInput.Text != null && sizeInput.Text != null &&
+            emailInput.Text != null)
         {
-            string[] datos = new string[7];
-            datos[0] = nameInput.Text;
-            datos[1] = ageInput.Text;
-            datos[2] = addressInput.Text;
-            datos[3] = descriptionInput.Text;
-            datos[4] = colorInput.Text;
-            datos[5] = sizeInput.Text;
-            datos[6] = emailInput.Text;
+            //Validation Name
+            for (int i = 0; i < nameInput.Text.Length; i++)
+            {
+                if (Char.IsDigit(nameInput.Text[i]))
+                {
+                    await DisplayAlert("Alert", "The Name should not have numbers", "OK");
+                    break;
+                }
+            }
+            //Validation AproxAge
+            for (int i = 0; i < ageInput.Text.Length; i++)
+            {
+                if (!Char.IsDigit(ageInput.Text[i]))
+                {
+                    await DisplayAlert("Alert", "The aprox. age should not have words", "OK");
+                    break;
+                }
+            }
+            try
+            {
+                if (Int32.Parse(ageInput.Text) <= 0 || Int32.Parse(ageInput.Text) > 25)
+                {
+                
+                    await DisplayAlert("Alert", "Please, enter a real aprox. age", "OK");
+                    return;
+                
+                }
+            }
+            catch (FormatException) { }
+            //Validation Address
+            if (addressInput.Text.Length < 8)
+            {
+                await DisplayAlert("Alert", "The length of the address should be longer", "OK");
+                return;
+            }
+            //Validation Description
+            if (descriptionInput.Text.Length < 5)
+            {
+                await DisplayAlert("Alert", "The length of the description should be longer", "OK");
+                return;
+            }
+            //Validation ContactMail
+            String expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (!Regex.IsMatch(emailInput.Text, expresion))
+            {
+                await DisplayAlert("Alert", "Please, enter a valid mail", "OK");
+                return;
+            }
+            if (BindingContext is Models.Dog dog)
+            {
+                string[] datos = new string[7];
+                datos[0] = nameInput.Text;
+                datos[1] = ageInput.Text;
+                datos[2] = addressInput.Text;
+                datos[3] = descriptionInput.Text;
+                datos[4] = colorInput.Text;
+                datos[5] = sizeInput.Text;
+                datos[6] = emailInput.Text;
 
-            File.WriteAllLines(dog.Filename, datos);
+                File.WriteAllLines(dog.Filename, datos);
+
+
+            }
+            await Shell.Current.GoToAsync("..");
         }
-
-        await Shell.Current.GoToAsync("..");
+        else
+        {
+            await DisplayAlert("Alert", "Please, complete all the information", "OK");
+        }
     }
 
     private void LoadDog(string fileName)

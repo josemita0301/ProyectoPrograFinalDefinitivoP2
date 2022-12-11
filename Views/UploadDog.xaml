@@ -46,9 +46,9 @@
             <Entry x:Name="emailInput"
                      Placeholder="Contact email" PlaceholderColor="Gray"/>
 
-            <StackLayout RadioButtonGroup.GroupName="vax">
+            <StackLayout RadioButtonGroup.GroupName="vax" >
                 <Label FontSize="14" FontAttributes="Bold" Text="Is the dog vaccinated?" Margin="0,5,5,0"/>
-                <RadioButton Value="Yes" Content="Yes" />
+                <RadioButton Value="Yes" Content="Yes" IsChecked="True"/>
                 <RadioButton Value="No" Content="No" />
             </StackLayout>
 
@@ -57,7 +57,7 @@
                 <Image Source="dog1.webp"
                    HeightRequest="50"
                    HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
+                <RadioButton Value="Cute1" IsChecked="True"/>
                 <Image Source="dog2.webp"
                    HeightRequest="50"
                    HorizontalOptions="Start"/>
