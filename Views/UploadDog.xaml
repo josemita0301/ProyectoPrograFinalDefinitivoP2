@@ -1,0 +1,84 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPrograFinalDefinitivoP2.Views.UploadDog"
+             Title="UploadDog">
+    <ScrollView Margin="20">
+        <StackLayout>
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="adoptme1.webp"
+                   SemanticProperties.Description="Adopt me icon!"
+                   HeightRequest="64" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Put a dog up for adoption!" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label FontSize="18" FontAttributes="Bold" Text="Please fill out the information below:" VerticalOptions="Center" />
+                <Label FontSize="22" VerticalOptions="End" />
+            </HorizontalStackLayout>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Name" Margin="0,5,5,0"/>
+            <Entry x:Name="nameInput"
+                   Placeholder="Name" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Aprox. Age" Margin="0,5,5,0"/>
+            <Entry x:Name="ageInput"
+                     Placeholder="Aprox. Age" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Address" Margin="0,5,5,0"/>
+            <Entry x:Name="addressInput"
+                     Placeholder="Address" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Description" Margin="0,5,5,0"/>
+            <Entry x:Name="descriptionInput"
+                     Placeholder="Description" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Color" Margin="0,5,5,0"/>
+            <Entry x:Name="colorInput"
+                     Placeholder="Color" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Size" Margin="0,5,5,0"/>
+            <Entry x:Name="sizeInput"
+                     Placeholder="Size" PlaceholderColor="Gray"/>
+
+            <Label FontSize="14" FontAttributes="Bold" Text="Contact email" Margin="0,5,5,0"/>
+            <Entry x:Name="emailInput"
+                     Placeholder="Contact email" PlaceholderColor="Gray"/>
+
+            <StackLayout RadioButtonGroup.GroupName="vax">
+                <Label FontSize="14" FontAttributes="Bold" Text="Is the dog vaccinated?" Margin="0,5,5,0"/>
+                <RadioButton Value="Yes" Content="Yes" />
+                <RadioButton Value="No" Content="No" />
+            </StackLayout>
+
+            <StackLayout RadioButtonGroup.GroupName="icon">
+                <Label FontSize="14" FontAttributes="Bold" Text="How does the dog look?" Margin="0,5,5,0"/>
+                <Image Source="dog1.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+                <Image Source="dog2.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+                <Image Source="dog3.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+                <Image Source="dog4.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+                <Image Source="dog5.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+                <Image Source="dog6.webp"
+                   HeightRequest="50"
+                   HorizontalOptions="Start"/>
+                <RadioButton Value="Cute"/>
+            </StackLayout>
+
+            <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="UploadDogClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -24,6 +24,11 @@
         Route="MainPage" />
 
         <ShellContent
+        Title="Upload a Dog"
+        ContentTemplate="{DataTemplate views:UploadDog}"
+        Route="MainPage" />
+
+        <ShellContent
         Title="Adoption Form"
         ContentTemplate="{DataTemplate views:FormPage}"
         Route="MainPage" />
