@@ -1,4 +1,5 @@
-
+using System.Text.RegularExpressions;
+using System.Linq.Expressions;
 
 namespace ProyectoPrograFinalDefinitivoP2.Views;
 
@@ -53,13 +54,11 @@ public partial class RegisterPage : ContentPage
                 }
             }
             //Validation Mail
-            for (int i = 0; i < mailInput.Text.Length; i++)
+            String expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (!Regex.IsMatch(mailInput.Text, expresion))
             {
-                if (Char.IsWhiteSpace(mailInput.Text[i]))
-                {
-                    await DisplayAlert("Alert", "Please, enter a valid mail", "OK");
-                    break;
-                }
+                await DisplayAlert("Alert", "Please, enter a valid mail", "OK");
+                return;
             }
             //Validation Password
             if (passwordInput.Text.Length < 8)
@@ -89,7 +88,6 @@ public partial class RegisterPage : ContentPage
                     }
                 }
             }
-
             if (BindingContext is Models.User user)
             {
                 string[] datos = new string[2];
@@ -100,7 +98,6 @@ public partial class RegisterPage : ContentPage
             }
 
             await Shell.Current.GoToAsync("..");
-
         }
         else
         {

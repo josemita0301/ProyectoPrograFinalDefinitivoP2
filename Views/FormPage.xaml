@@ -36,7 +36,7 @@
 
             <Label FontSize="14" FontAttributes="Bold" Text="Commitment statement" Margin="0,5,5,0"/>
             <Label FontSize="12" FontAttributes="Italic" Text="You are going to be a responsible companion to the dog. If you agree, we will get you in contact with the current owner." Margin="0,5,5,0"/>
-            <CheckBox x:Name="agree" CheckedChanged="OnCheckBoxCheckedChanged" IsEnabled="False"/>
+            <CheckBox x:Name="agree" CheckedChanged="OnCheckBoxCheckedChanged"/>
 
 
             <Button x:Name="submit" Text="Submit form" Clicked="LearnMore_Clicked" Margin="0,5,5,0" IsEnabled="False"/>
