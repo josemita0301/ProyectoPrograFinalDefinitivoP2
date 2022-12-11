@@ -101,6 +101,8 @@ public partial class RegisterPage : ContentPage
         {
             await DisplayAlert("Alert", "Please, complete all the information", "OK");
         }
+
+        await Navigation.PushModalAsync(new DogPage());
     }
 
     private void LoadUser(string fileName)
