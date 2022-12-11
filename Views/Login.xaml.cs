@@ -11,12 +11,12 @@ public partial class Login : ContentPage
 		InitializeComponent();
     }
 
-    private void LoginButton(object sender, EventArgs e)
+    private async void LoginButton(object sender, EventArgs e)
     {
         string appDataPath = FileSystem.AppDataDirectory;
 
         string[] archivos = Directory.GetFiles(appDataPath);
-        for (int i = 0; i <= archivos.Length; i++)
+        for (int i = 0; i < archivos.Length; i++)
         {
             bool uservalid = false;
             int cont = 0;
@@ -37,7 +37,7 @@ public partial class Login : ContentPage
                     {
                         if (uservalid)
                         {
-
+                            await Shell.Current.GoToAsync(nameof(DogPage));
                         }
                     }
                 }
