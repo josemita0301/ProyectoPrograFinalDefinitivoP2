@@ -8,20 +8,17 @@
 
     <TabBar>
 
+        <ShellContent Route="Register" IsVisible="False" ContentTemplate="{DataTemplate views:Login}"/>
+        
         <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:Login}"
-        Route="MainPage" />
-        
-        <ShellContent
-        Title="Register"
-        ContentTemplate="{DataTemplate views:RegisterPage}"
-        Route="MainPage" />
+        />
 
         <ShellContent
         Title="Dogs"
         ContentTemplate="{DataTemplate views:DogPage}"
-        Route="MainPage" />
+        />
 
         <ShellContent
         Title="Upload a Dog"
@@ -31,7 +28,7 @@
         <ShellContent
         Title="Adoption Form"
         ContentTemplate="{DataTemplate views:FormPage}"
-        Route="MainPage" />
+        />
 
         
     </TabBar>

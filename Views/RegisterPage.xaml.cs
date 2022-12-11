@@ -96,13 +96,15 @@ public partial class RegisterPage : ContentPage
                 File.WriteAllText(user.Filename, datos);
             }
 
+            await Shell.Current.GoToAsync("..");
+
         }
         else
         {
             await DisplayAlert("Alert", "Please, complete all the information", "OK");
         }
 
-        await Navigation.PushModalAsync(new DogPage());
+
     }
 
     private void LoadUser(string fileName)
