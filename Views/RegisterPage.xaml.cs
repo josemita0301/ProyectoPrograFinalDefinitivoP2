@@ -69,7 +69,7 @@ public partial class RegisterPage : ContentPage
             //Validation Area 
             if (areaInput.Text.Length < 5)
             {
-                await DisplayAlert("Alert", "The length of the password should be longer", "OK");
+                await DisplayAlert("Alert", "The length of the area should be longer", "OK");
                 return;
             }
             //Validation PhoneNumber

@@ -28,7 +28,7 @@
                 <Frame ZIndex="1" HasShadow="True" BorderColor="White" CornerRadius="28" HeightRequest="56" WidthRequest="56">
                     <Image Source="lock.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center"/>
                 </Frame>
-                <Entry x:Name="PasswordField" MaximumHeightRequest="45"  AnchorX="-12" Placeholder="Password" PlaceholderColor="Gray" Text="{Binding Text}"/>
+                <Entry x:Name="PasswordField" MaximumHeightRequest="45"  AnchorX="-12" Placeholder="Password" PlaceholderColor="Gray" Text="{Binding Text}" IsPassword="True"/>
             </StackLayout>
 
             <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="LoginButton"/>

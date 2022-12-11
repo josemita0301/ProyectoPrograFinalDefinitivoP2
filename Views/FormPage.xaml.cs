@@ -7,10 +7,25 @@ public partial class FormPage : ContentPage
         InitializeComponent();
     }
 
+    private async void SendWhatsapp(string phoneNumber, string message)
+    {
+        bool supportsUri = await Launcher.Default.CanOpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
+        if (supportsUri)
+            await Launcher.Default.OpenAsync($"whatsapp://send?phone=+{phoneNumber}&text={message}");
+
+        else
+            await App.Current.MainPage.DisplayAlert("Error", "Unable to open WhatsApp.", "OK");
+
+    }
+
     private async void LearnMore_Clicked(object sender, EventArgs e)
     {
-        // Navigate to the specified URL in the system browser.
-        await Launcher.Default.OpenAsync("https://aka.ms/maui");
+        // enviar mensaje de confirmación
+        {
+            string number = "+593 " + "987629927"; // LEER DE ARCHIVO
+            SendWhatsapp(number, "Hi! The adoption process has started!");
+        }
+
     }
 
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
