@@ -52,6 +52,12 @@
 	  <None Remove="Resources\Images\company_logo.jpg" />
 	  <None Remove="Resources\Images\lock.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\user1.png" />
+	  <None Remove="Resources\Images\user2.png" />
+	  <None Remove="Resources\Images\user3.png" />
+	  <None Remove="Resources\Images\user4.png" />
+	  <None Remove="Resources\Images\user5.png" />
+	  <None Remove="Resources\Images\user6.png" />
 	</ItemGroup>
 
 	<ItemGroup>

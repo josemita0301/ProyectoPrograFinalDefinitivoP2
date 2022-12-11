@@ -48,7 +48,7 @@
 
             <Label FontSize="14" FontAttributes="Bold" Text="Icono" Margin="0,5,5,0"/>
             <RadioButton x:Name="yesPD" Value="Yes"
-             GroupName="iconGroup" />
+             GroupName="iconGroup" IsChecked="True"/>
             <Image Source="user1.png"
                    HeightRequest="50"
                    HorizontalOptions="Start"/>
