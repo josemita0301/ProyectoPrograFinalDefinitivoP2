@@ -19,14 +19,14 @@
 
             <StackLayout RadioButtonGroup.GroupName="moreDogs">
                 <Label FontSize="14" FontAttributes="Bold" Text="Do you currently have more dogs?" Margin="0,5,5,0"/>
-                <RadioButton Value="Yes" Content="Yes" />
-                <RadioButton Value="No" Content="No" />
+                <RadioButton x:Name="moreDogsY" Value="Yes" Content="Yes" />
+                <RadioButton x:Name="moreDogsN" Value="No" Content="No" />
             </StackLayout>
 
             <StackLayout RadioButtonGroup.GroupName="prevDogs">
                 <Label FontSize="14" FontAttributes="Bold" Text="Have you had other dogs in the past?" Margin="0,5,5,0"/>
-                <RadioButton Value="Yes" Content="Yes" />
-                <RadioButton Value="No" Content="No" />
+                <RadioButton x:Name="prevDogsY" Value="Yes" Content="Yes" />
+                <RadioButton x:Name="prevDogsN" Value="No" Content="No" />
             </StackLayout>
 
             <Label FontSize="14" FontAttributes="Bold" Text="What happened with the previous dog(s)?" Margin="0,5,5,0"/>

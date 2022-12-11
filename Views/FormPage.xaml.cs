@@ -26,7 +26,54 @@ public partial class FormPage : ContentPage
 
     private async void LearnMore_Clicked(object sender, EventArgs e)
     {
-        SendMailNewOwner();
+
+        //Validation complete information
+        if (motivInput.Text != null)
+            //&& (moreDogsY.IsChecked | moreDogsN.IsChecked) && (prevDogsY.IsChecked | prevDogsN.IsChecked))
+        {
+            //Validation motive
+            if (motivInput.Text.Length <= 3)
+            {
+                await DisplayAlert("Alert", "Please enter a valid motivation", "OK");
+                return;
+            }
+
+            if (prevDogsY.IsChecked == true)
+            {
+                //Validation prev dogs
+                if (prevDogsInput.Text.Length <= 3)
+                {
+                    await DisplayAlert("Alert", "Please provide information about your previous dog(s)", "OK");
+                    return;
+                }
+            }
+            else
+            {
+                prevDogsInput.Text = "";
+            }
+
+            //Validation more dogs radio button
+            if (prevDogsY.IsChecked == false && prevDogsN.IsChecked == false)
+            {
+                await DisplayAlert("Alert", "Please select an option in Previous Dogs", "OK");
+                return;
+            }
+            //Validation prev dogs radio button
+            if (moreDogsY.IsChecked == false && moreDogsN.IsChecked == false)
+            {
+                await DisplayAlert("Alert", "Please select an option in More Dogs", "OK");
+                return;
+            }
+
+            // enviar mensaje de confirmación
+            
+            string number = "+593 " + "987629927"; // LEER DE ARCHIVO
+            SendWhatsapp(number, "Hi! The adoption process has started!");
+        }
+        else
+        {
+            await DisplayAlert("Alert", "Please, complete the information needed", "OK");
+        }
 
     }
 
