@@ -13,7 +13,7 @@
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Spacing="10">
-                <Label FontSize="22" FontAttributes="Bold" Text="Please fill out the information below:" VerticalOptions="Center" />
+                <Label FontSize="18" FontAttributes="Bold" Text="Please fill out the information below:" VerticalOptions="Center" />
                 <Label FontSize="22" VerticalOptions="End" />
             </HorizontalStackLayout>
 
@@ -27,23 +27,23 @@
 
             <Label FontSize="14" FontAttributes="Bold" Text="Surname" Margin="0,5,5,0"/>
             <Entry x:Name="surnameInput"
-                     Placeholder="Name" PlaceholderColor="Gray"/>
+                     Placeholder="Surname" PlaceholderColor="Gray"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Mail" Margin="0,5,5,0"/>
             <Entry x:Name="mailInput"
-                     Placeholder="Name" PlaceholderColor="Gray"/>
+                     Placeholder="Mail" PlaceholderColor="Gray"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Password" Margin="0,5,5,0"/>
             <Entry x:Name="passwordInput"
-                     Placeholder="Name" PlaceholderColor="Gray"/>
+                     Placeholder="Password" PlaceholderColor="Gray" IsPassword="True"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Area" Margin="0,5,5,0"/>
             <Entry x:Name="areaInput"
-                     Placeholder="Name" PlaceholderColor="Gray"/>
+                     Placeholder="Area" PlaceholderColor="Gray"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Phone Number" Margin="0,5,5,0"/>
             <Entry x:Name="phoneInput"
-                     Placeholder="Name" PlaceholderColor="Gray"/>
+                     Placeholder="Phone Number" PlaceholderColor="Gray"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Icon" Margin="0,5,5,0"/>
             <RadioButton x:Name="yesPD" Value="Yes"
