@@ -33,7 +33,7 @@
 
             <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
                 <Label Text="No tiene una cuenta?" TextColor="Gray"/>
-                <Label Text="Registrese aquí" TextColor="#50b3f2"/>
+                <Button Text="Registrese aquí" TextColor="#50b3f2" BackgroundColor="Black" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Clicked="RegisterButton"/>
             </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
