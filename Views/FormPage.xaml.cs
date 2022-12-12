@@ -3,6 +3,7 @@ using System.Net.Mail;
 using System.Net.Security;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 
 namespace ProyectoPrograFinalDefinitivoP2.Views;
 
@@ -53,6 +54,13 @@ public partial class FormPage : ContentPage
                 await DisplayAlert("Alert", "Please select an option in More Dogs", "OK");
                 return;
             }
+            //Validation Mail
+            String expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (!Regex.IsMatch(emailContactInput.Text, expresion))
+            {
+                await DisplayAlert("Alert", "Please, enter a valid mail", "OK");
+                return;
+            }
 
             /**
             // enviar mensaje de confirmación Whatsapp
@@ -81,7 +89,7 @@ public partial class FormPage : ContentPage
     {
         MailMessage correo = new MailMessage();
         correo.From = new MailAddress("betterhomesender@gmail.com", "Better Home", System.Text.Encoding.UTF8);//Correo de salida
-        correo.To.Add("antocortesl27@gmail.com"); //Correo destino? amelycordova49@gmail.com
+        correo.To.Add(emailContactInput.Text); //Correo destino? 
         correo.Subject = "Correo de adopcion"; //Asunto
         correo.Body = "Your request has been processed! The current owner will get in contact with you soon."; //Mensaje del correo
         correo.IsBodyHtml = true;
