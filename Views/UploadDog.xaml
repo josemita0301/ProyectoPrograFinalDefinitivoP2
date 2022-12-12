@@ -20,31 +20,31 @@
 
             <Label FontSize="14" FontAttributes="Bold" Text="Name" Margin="0,5,5,0"/>
             <Entry x:Name="nameInput"
-                   Placeholder="Name" PlaceholderColor="Gray"/>
+                   Placeholder="Name" PlaceholderColor="Gray" Text="{Binding Name}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Aprox. Age" Margin="0,5,5,0"/>
             <Entry x:Name="ageInput"
-                     Placeholder="Aprox. Age" PlaceholderColor="Gray"/>
+                     Placeholder="Aprox. Age" PlaceholderColor="Gray" Text="{Binding Age}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Address" Margin="0,5,5,0"/>
             <Entry x:Name="addressInput"
-                     Placeholder="Address" PlaceholderColor="Gray"/>
+                     Placeholder="Address" PlaceholderColor="Gray" Text="{Binding Address}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Description" Margin="0,5,5,0"/>
             <Entry x:Name="descriptionInput"
-                     Placeholder="Description" PlaceholderColor="Gray"/>
+                     Placeholder="Description" PlaceholderColor="Gray" Text="{Binding Description}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Color" Margin="0,5,5,0"/>
             <Entry x:Name="colorInput"
-                     Placeholder="Color" PlaceholderColor="Gray"/>
+                     Placeholder="Color" PlaceholderColor="Gray" Text="{Binding Color}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Size" Margin="0,5,5,0"/>
             <Entry x:Name="sizeInput"
-                     Placeholder="Size" PlaceholderColor="Gray"/>
+                     Placeholder="Size" PlaceholderColor="Gray" Text="{Binding Size}"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Contact email" Margin="0,5,5,0"/>
             <Entry x:Name="emailInput"
-                     Placeholder="Contact email" PlaceholderColor="Gray"/>
+                     Placeholder="Contact email" PlaceholderColor="Gray" Text="{Binding Email}"/>
 
             <StackLayout RadioButtonGroup.GroupName="vax" >
                 <Label FontSize="14" FontAttributes="Bold" Text="Is the dog vaccinated?" Margin="0,5,5,0"/>

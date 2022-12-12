@@ -28,6 +28,12 @@ public partial class FormPage : ContentPage
                 return;
             }
 
+            if (dogNameInput.Text.Length <= 3)
+            {
+                await DisplayAlert("Alert", "Please enter a valid dog name", "OK");
+                return;
+            }
+
             if (prevDogsY.IsChecked == true)
             {
                 //Validation prev dogs
@@ -92,7 +98,7 @@ public partial class FormPage : ContentPage
         MailMessage correo = new MailMessage();
         correo.From = new MailAddress("betterhomesender@gmail.com", "Better Home", System.Text.Encoding.UTF8);//Correo de salida
         correo.To.Add(emailContactInput.Text); //Correo destino? 
-        correo.Subject = "Correo de adopcion"; //Asunto
+        correo.Subject = "Correo de adopcion para adoptar a: " + dogNameInput.Text; //Asunto
         correo.Body = "Your request has been processed! The current owner will get in contact with you soon."; //Mensaje del correo
         correo.IsBodyHtml = true;
         correo.Priority = MailPriority.Normal;

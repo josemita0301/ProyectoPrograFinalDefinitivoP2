@@ -9,7 +9,7 @@
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
-        Title="Home"
+        Title=""
         ContentTemplate="{DataTemplate views:Login}"
         />
     </FlyoutItem>

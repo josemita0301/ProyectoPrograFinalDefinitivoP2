@@ -13,6 +13,10 @@
             </HorizontalStackLayout>
             <Label FontSize="22" Text="Fill out the adoption form as a last step!" VerticalOptions="End" />
 
+            <Label FontSize="14" FontAttributes="Bold" Text="Enter the dog's name you want to adopt" Margin="0,5,5,0"/>
+            <Entry x:Name="dogNameInput"
+                     Placeholder="Dog's name:" PlaceholderColor="Gray"/>
+            
             <Label FontSize="14" FontAttributes="Bold" Text="Why do you want to adopt a dog?" Margin="0,5,5,0"/>
             <Entry x:Name="motivInput"
                      Placeholder="Enter your motivation for adopting a dog:" PlaceholderColor="Gray"/>
