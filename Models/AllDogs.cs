@@ -39,7 +39,8 @@ namespace ProyectoPrograFinalDefinitivoP2.Models
                                             Description= File.ReadAllLines(filename)[3],
                                             Color= File.ReadAllLines(filename)[4],
                                             Size= File.ReadAllLines(filename)[5],
-                                            Email= File.ReadAllLines(filename)[6]
+                                            Email= File.ReadAllLines(filename)[6],
+                                            imageRoute = File.ReadAllLines(filename)[7]
                                         }); 
 
             foreach (Dog dog in dogs)

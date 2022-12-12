@@ -75,6 +75,8 @@ public partial class FormPage : ContentPage
             await DisplayAlert("Alert", "Please, complete the information needed", "OK");
         }
 
+        await Shell.Current.GoToAsync("..");
+
     }
 
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)

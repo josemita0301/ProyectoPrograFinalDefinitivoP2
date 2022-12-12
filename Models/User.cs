@@ -16,7 +16,7 @@ namespace ProyectoPrograFinalDefinitivoP2.Models
         public string Email { get; set; }
         public string area { get; set; }
         public string phoneNumber { get; set; }
-
+        public string imageRoute { get; set; }
 
     }
 }

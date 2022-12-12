@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using System.Linq.Expressions;
+using static Android.Provider.MediaStore.Audio;
 
 namespace ProyectoPrograFinalDefinitivoP2.Views;
 
@@ -90,7 +91,7 @@ public partial class RegisterPage : ContentPage
             }
             if (BindingContext is Models.User user)
             {
-                string[] datos = new string[7];
+                string[] datos = new string[8];
                 datos[0] = userNameInput.Text;
                 datos[1] = passwordInput.Text;
                 datos[2] = nameInput.Text;
@@ -98,6 +99,31 @@ public partial class RegisterPage : ContentPage
                 datos[4] = mailInput.Text;
                 datos[5] = areaInput.Text;
                 datos[6] = phoneInput.Text;
+                if (rb1.IsChecked)
+                {
+                    datos[7] = "user1.png";
+                }
+                if (rb2.IsChecked)
+                {
+                    datos[7] = "user2.png";
+                }
+                if (rb3.IsChecked)
+                {
+                    datos[7] = "user3.png";
+                }
+                if (rb4.IsChecked)
+                {
+                    datos[7] = "user4.png";
+                }
+                if (rb5.IsChecked)
+                {
+                    datos[7] = "user5.png";
+                }
+                if (rb6.IsChecked)
+                {
+                    datos[7] = "user6.png";
+                }
+
 
                 File.WriteAllLines(user.Filename, datos);
             }

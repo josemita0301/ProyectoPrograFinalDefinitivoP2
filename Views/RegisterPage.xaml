@@ -48,36 +48,31 @@
                      Placeholder="Phone Number" PlaceholderColor="Gray"/>
 
             <Label FontSize="14" FontAttributes="Bold" Text="Icon" Margin="0,5,5,0"/>
-            <RadioButton x:Name="yesPD" Value="Yes"
-             GroupName="iconGroup" IsChecked="True"/>
-            <Image Source="user1.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-            <RadioButton Value="No"
-             GroupName="iconGroup" />
-            <Image Source="user2.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-            <RadioButton Value="No"
-             GroupName="iconGroup" />
-            <Image Source="user3.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-            <RadioButton Value="No"
-             GroupName="iconGroup" />
-            <Image Source="user4.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-            <RadioButton Value="No"
-             GroupName="iconGroup" />
-            <Image Source="user5.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-            <RadioButton Value="No"
-             GroupName="iconGroup" />
-            <Image Source="user6.png"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
+            
+            <RadioButton x:Name="rb1" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user1.png" HeightRequest="50" HorizontalOptions="Start"/>
+
+            <RadioButton x:Name="rb2" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user2.png" HeightRequest="50" HorizontalOptions="Start"/>
+
+            <RadioButton x:Name="rb3" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user3.png" HeightRequest="50" HorizontalOptions="Start"/>
+
+            <RadioButton x:Name="rb4" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user4.png" HeightRequest="50" HorizontalOptions="Start"/>
+
+            <RadioButton x:Name="rb5" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user5.png" HeightRequest="50" HorizontalOptions="Start"/>
+
+            <RadioButton x:Name="rb6" GroupName="iconGroup" IsChecked="False">
+            </RadioButton>
+            <Image Source="user6.png" HeightRequest="50" HorizontalOptions="Start"/>
+
 
             <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="RegisterClick"/>
         </StackLayout>

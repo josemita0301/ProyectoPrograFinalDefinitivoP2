@@ -16,6 +16,7 @@ namespace ProyectoPrograFinalDefinitivoP2.Models
         public string Color { get; set; }
         public string Size { get; set; }
         public string Email { get; set; }
+        public string imageRoute { get; set; }
 
     }
 }

@@ -77,7 +77,7 @@ public partial class UploadDog : ContentPage
             }
             if (BindingContext is Models.Dog dog)
             {
-                string[] datos = new string[7];
+                string[] datos = new string[8];
                 datos[0] = nameInput.Text;
                 datos[1] = ageInput.Text;
                 datos[2] = addressInput.Text;
@@ -86,6 +86,31 @@ public partial class UploadDog : ContentPage
                 datos[5] = sizeInput.Text;
                 datos[6] = emailInput.Text;
 
+                if (rb1.IsChecked)
+                {
+                    datos[7] = "dog1.webp";
+                }
+                if (rb2.IsChecked)
+                {
+                    datos[7] = "dog2.webp";
+                }
+                if (rb3.IsChecked)
+                {
+                    datos[7] = "dog3.webp";
+                }
+                if (rb4.IsChecked)
+                {
+                    datos[7] = "dog4.webp";
+                }
+                if (rb5.IsChecked)
+                {
+                    datos[7] = "dog5.webp";
+                }
+                if (rb6.IsChecked)
+                {
+                    datos[7] = "dog6.webp";
+                }
+               
                 File.WriteAllLines(dog.Filename, datos);
 
 
@@ -136,7 +161,10 @@ public partial class UploadDog : ContentPage
                 {
                     dogModel.Email = line;
                 }
-
+                if (cont == 7)
+                {
+                    dogModel.imageRoute = line;
+                }
                 cont++;
             }
         }

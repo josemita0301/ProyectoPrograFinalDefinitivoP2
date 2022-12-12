@@ -27,7 +27,7 @@ public partial class DogPage : ContentPage
             var dog = (Models.Dog)e.CurrentSelection[0];
 
             // Should navigate to "NotePage?ItemId=path\on\device\XYZ.notes.txt"
-            await Shell.Current.GoToAsync($"{nameof(UploadDog)}?{nameof(UploadDog.ItemId)}={dog.Filename}");
+            await Shell.Current.GoToAsync(nameof(FormPage));
 
             // Unselect the UI
             dogsCollection.SelectedItem = null;

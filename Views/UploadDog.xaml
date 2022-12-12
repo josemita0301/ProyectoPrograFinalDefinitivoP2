@@ -54,30 +54,30 @@
 
             <StackLayout RadioButtonGroup.GroupName="icon">
                 <Label FontSize="14" FontAttributes="Bold" Text="How does the dog look?" Margin="0,5,5,0"/>
-                <Image Source="dog1.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute1" IsChecked="True"/>
-                <Image Source="dog2.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
-                <Image Source="dog3.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
-                <Image Source="dog4.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
-                <Image Source="dog5.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
-                <Image Source="dog6.webp"
-                   HeightRequest="50"
-                   HorizontalOptions="Start"/>
-                <RadioButton Value="Cute"/>
+
+                <RadioButton x:Name="rb1" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog1.webp" HeightRequest="50" HorizontalOptions="Start"/>
+
+                <RadioButton x:Name="rb2" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog2.webp" HeightRequest="50" HorizontalOptions="Start"/>
+
+                <RadioButton x:Name="rb3" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog3.webp" HeightRequest="50" HorizontalOptions="Start"/>
+
+                <RadioButton x:Name="rb4" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog4.webp" HeightRequest="50" HorizontalOptions="Start"/>
+
+                <RadioButton x:Name="rb5" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog5.webp" HeightRequest="50" HorizontalOptions="Start"/>
+
+                <RadioButton x:Name="rb6" GroupName="iconGroup" IsChecked="False">
+                </RadioButton>
+                <Image Source="dog6.webp" HeightRequest="50" HorizontalOptions="Start"/>
             </StackLayout>
 
             <Button Text="Enter" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" Clicked="UploadDogClicked"/>
